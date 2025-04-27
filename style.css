@@ -1,0 +1,226 @@
+/* Polices et box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Styles généraux */
+  body {
+    background: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* En-tête (Header) */
+  header {
+    width: 100%;
+    background: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Hero */
+  .hero {
+    width: 100%;
+    height: 100vh;
+    /* Image de fond locale */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url("img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 5rem; /* pour compenser le header fixe */
+    color: #fff;
+  }
+  
+  .hero-text {
+    max-width: 700px;
+    color: #f2f2f2; /* Blanc cassé au lieu du #fff */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* Améliore la lisibilité */
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background: #e91e63;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #c2185b;
+  }
+  
+  /* Section Projets */
+  .projects {
+    padding: 4rem 2rem;
+    background: #fff;
+    text-align: center;
+    margin-top: 0; /* si besoin de forcer l'espacement */
+  }
+  
+  .projects h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .project-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+  
+  .project-link {
+    display: inline-block;
+    margin: 0 1rem 1rem 1rem;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #333;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background: #333;
+    color: #fff;
+  }
+  
+  /* Section Contact */
+  .contact {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+  }
+  
+  .email {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e91e63;
+  }
+  
+  /* Pied de page (Footer) */
+  footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* Responsive - Ajustements */
+  @media (max-width: 768px) {
+    nav ul {
+      gap: 1rem;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+  }
+  
+    @media (max-width: 768px) {
+    /* Ici, tu ajustes les styles pour les écrans de moins de 768px de large (tablettes, téléphones) */
+    
+    .projects-container {
+      grid-template-columns: 1fr; /* Au lieu de 2 ou 3 colonnes, une seule */
+    }
+  
+    .hero h1 {
+      font-size: 2rem; /* Réduit la taille du texte */
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    /* etc. */
+    }
+
+    
